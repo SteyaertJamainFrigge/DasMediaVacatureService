@@ -1,6 +1,8 @@
 <?php
 
-use App\Http\Controllers\TestController;
+use App\Http\Controllers\CityController;
+use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\JobController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,12 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'App\Http\Controllers\JobController@index');
 
-Route::get('user', [TestController::class, 'index']);
+Route::resource('/jobs', JobController::class);
+Route::resource('/companies', CompanyController::class);
+Route::resource('/cities', CityController::class);
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
