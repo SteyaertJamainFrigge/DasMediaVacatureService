@@ -24,5 +24,3 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('/cities', CityController::class);
     Route::resource('/jobs', JobController::class);
 });
-
-Route::get('/jobs/{job}', 'App\Http\Controllers\JobController@show');
