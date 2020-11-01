@@ -13,7 +13,7 @@ use Illuminate\Http\Response;
 class CompanyController extends Controller
 {
 
-    const COMPANIES_INDEX = "Companies.index";
+    const COMPANIES_INDEX = "companies.index";
     /**
      * Display a listing of the resource.
      *
@@ -23,7 +23,7 @@ class CompanyController extends Controller
     {
         $companies = Company::latest()->paginate(5);
 
-        return view(self::COMPANIES_INDEX, compact('companies'))
+        return view('Companies.index', compact('companies'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 

@@ -20,7 +20,7 @@ class CityController extends Controller
     {
         $cities = City::latest()->paginate(5);
 
-        return view(self::CITIES_INDEX, compact('cities'))
+        return view("Cities.index", compact('cities'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
@@ -48,7 +48,7 @@ class CityController extends Controller
 
         City::create($request->all());
 
-        return redirect()->route(self::CITIES_INDEX)
+        return redirect()->route('cities.index')
             ->with('success', 'Company created successfully.');
     }
 

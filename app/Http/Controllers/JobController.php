@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 
 class JobController extends Controller
 {
-    private const JOBS_INDEX = 'Jobs.index';
+    private const JOBS_INDEX = 'jobs.index';
 
     /**
      * Display a listing of the resource.
@@ -21,7 +21,7 @@ class JobController extends Controller
     public function index()
     {
         $jobs = Job::latest()->paginate(5);
-        return view(self::JOBS_INDEX, compact('jobs'))
+        return view('Jobs.index', compact('jobs'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
