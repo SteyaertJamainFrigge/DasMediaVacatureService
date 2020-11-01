@@ -8,7 +8,7 @@
                 <h2></h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{route('cities.index')}}" title="Go back"> <em
+                <a class="btn btn-primary" href="{{secure_url('cities.index')}}" title="Go back"> <em
                         class="fas fa-backward "></em> </a>
             </div>
         </div>

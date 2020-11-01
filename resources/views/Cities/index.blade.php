@@ -7,7 +7,7 @@
                 <h2>All Cities</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{route('cities.create')}}" title="Create a City"> <em class="fas fa-plus-circle"></em>
+                <a class="btn btn-success" href="{{secure_url('cities.create')}}" title="Create a City"> <em class="fas fa-plus-circle"></em>
                 </a>
             </div>
         </div>
@@ -35,17 +35,17 @@
                 <td>{{$city->updated_at}}</td>
                 <td>
                     @guest
-                        <a href="{{route('cities.show', $city)}}" title="show">
+                        <a href="{{secure_url('cities.show', $city)}}" title="show">
                             <em class="fas fa-eye text-success  fa-lg"></em>
                         </a>
                     @else
-                        <form action="{{route('cities.destroy', $city)}}" method="POST">
+                        <form action="{{secure_url('cities.destroy', $city)}}" method="POST">
 
-                            <a href="{{route('cities.show', $city)}}" title="show">
+                            <a href="{{secure_url('cities.show', $city)}}" title="show">
                                 <em class="fas fa-eye text-success  fa-lg"></em>
                             </a>
 
-                            <a href="{{route('cities.edit', $city)}}">
+                            <a href="{{secure_url('cities.edit', $city)}}">
                                 <em class="fas fa-edit  fa-lg"></em>
                             </a>
                             @csrf

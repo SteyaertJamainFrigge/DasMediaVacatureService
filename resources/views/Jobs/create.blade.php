@@ -7,7 +7,7 @@
                 <h2>Add New Job</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{route('jobs.index')}}" title="Go back"> <em class="fas fa-backward "></em> </a>
+                <a class="btn btn-primary" href="{{secure_url('jobs.index')}}" title="Go back"> <em class="fas fa-backward "></em> </a>
             </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
             </ul>
         </div>
     @endif
-    <form action="{{route('jobs.store')}}" method="POST">
+    <form action="{{secure_url('jobs.store')}}" method="POST">
         @csrf
 
         <div class="row">

@@ -7,7 +7,7 @@
                 <h2>All Jobs</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{route('jobs.create')}}" title="Create a product"> <em
+                <a class="btn btn-success" href="{{secure_url('jobs.create')}}" title="Create a product"> <em
                         class="fas fa-plus-circle"></em>
                 </a>
             </div>
@@ -40,17 +40,17 @@
                 <td>{{$job->updated_at}}</td>
                 <td>
                     @guest
-                        <a href="{{route('jobs.show', $job)}}" title="show">
+                        <a href="{{secure_url('jobs.show', $job)}}" title="show">
                             <em class="fas fa-eye text-success  fa-lg"></em>
                         </a>
                     @else
-                        <form action="{{route('jobs.destroy', $job)}}" method="POST">
+                        <form action="{{secure_url('jobs.destroy', $job)}}" method="POST">
 
-                            <a href="{{route('jobs.show', $job)}}" title="show">
+                            <a href="{{secure_url('jobs.show', $job)}}" title="show">
                                 <em class="fas fa-eye text-success  fa-lg"></em>
                             </a>
 
-                            <a href="{{route('jobs.edit', $job)}}">
+                            <a href="{{secure_url('jobs.edit', $job)}}">
                                 <em class="fas fa-edit  fa-lg"></em>
                             </a>
                             @csrf
