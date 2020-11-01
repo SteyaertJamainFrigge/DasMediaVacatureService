@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class CityController extends Controller
 {
-    const CITIES_INDEX = "Cities.index";
+    const CITIES_INDEX = "cities.index";
     /**
      * Display a listing of the resource.
      *
