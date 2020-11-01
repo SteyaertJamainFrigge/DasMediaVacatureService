@@ -18,10 +18,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'App\Http\Controllers\JobController@index');
-
-Route::resource('/jobs', JobController::class);
-Route::resource('/companies', CompanyController::class);
-Route::resource('/cities', CityController::class);
-
 Auth::routes();
+Route::group(['middleware' => ['auth']], function () {
+    Route::resource('/companies', CompanyController::class);
+    Route::resource('/cities', CityController::class);
+    Route::resource('/jobs', JobController::class);
+});
 
+Route::get('/jobs/{job}', 'App\Http\Controllers\JobController@show');
