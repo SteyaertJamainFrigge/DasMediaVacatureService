@@ -6,10 +6,13 @@
             <div class="pull-left">
                 <h2>All Cities</h2>
             </div>
-            <div class="pull-right">
-                <a class="btn btn-success" href="{{route('cities.create')}}" title="Create a City"> <em class="fas fa-plus-circle"></em>
-                </a>
-            </div>
+            @auth
+                <div class="pull-right">
+                    <a class="btn btn-success" href="{{route('cities.create')}}" title="Create a City"> <em
+                            class="fas fa-plus-circle"></em>
+                    </a>
+                </div>
+            @endauth
         </div>
     </div>
 
