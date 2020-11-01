@@ -44,25 +44,25 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{secure_url('jobs.index')}}">Jobs</a>
+                                <a class="nav-link" href="{{route('jobs.index')}}">Jobs</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ secure_url('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ secure_url('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                                 </li>
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{secure_url('jobs.index')}}">Jobs</a>
+                                <a class="nav-link" href="{{route('jobs.index')}}">Jobs</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{secure_url('companies.index')}}">Companies</a>
+                                <a class="nav-link" href="{{route('companies.index')}}">Companies</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{secure_url('cities.index')}}">Cities</a>
+                                <a class="nav-link" href="{{route('cities.index')}}">Cities</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -70,13 +70,13 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ secure_url('logout') }}"
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
 
-                                    <form id="logout-form" action="{{ secure_url('logout') }}" method="POST" class="d-none">
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
                                 </div>

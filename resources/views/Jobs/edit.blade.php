@@ -7,7 +7,7 @@
                 <h2>Edit Job</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{secure_url('jobs.index')}}" title="Go back"> <em
+                <a class="btn btn-primary" href="{{route('jobs.index')}}" title="Go back"> <em
                         class="fas fa-backward "></em> </a>
             </div>
         </div>
@@ -22,7 +22,7 @@
             </ul>
         </div>
     @endif
-    <form action="{{secure_url('jobs.update', $job->id)}}" method="POST">
+    <form action="{{route('jobs.update', $job->id)}}" method="POST">
         @csrf
         @method('PUT')
         <div class="row">
