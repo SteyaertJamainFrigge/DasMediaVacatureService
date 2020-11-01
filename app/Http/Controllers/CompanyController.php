@@ -13,7 +13,7 @@ use Illuminate\Http\Response;
 class CompanyController extends Controller
 {
 
-    const COMPANIES_INDEX = "companies.index";
+    const COMPANIES_INDEX = "Companies.index";
     /**
      * Display a listing of the resource.
      *
@@ -35,7 +35,7 @@ class CompanyController extends Controller
     public function create()
     {
         $cities = City::all();
-        return view('companies.create', compact('cities'));
+        return view('Companies.create', compact('cities'));
     }
 
     /**
@@ -65,7 +65,7 @@ class CompanyController extends Controller
      */
     public function show(Company $company)
     {
-        return view('companies.show', compact('company'));
+        return view('Companies.show', compact('company'));
     }
 
     /**
@@ -77,7 +77,7 @@ class CompanyController extends Controller
     public function edit(Company $company)
     {
         $cities = City::all();
-        return view('companies.edit', compact('company', 'cities'));
+        return view('Companies.edit', compact('company', 'cities'));
     }
     /**
      * Update the specified resource in storage.

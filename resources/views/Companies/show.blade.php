@@ -8,7 +8,7 @@
                 <h2>{{$company->name}}</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{route('companies.index')}}" title="Go back"> <i class="fas fa-backward "></i> </a>
+                <a class="btn btn-primary" href="{{route('Companies.index')}}" title="Go back"> <i class="fas fa-backward "></i> </a>
             </div>
         </div>
     </div>

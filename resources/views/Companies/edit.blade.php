@@ -7,7 +7,7 @@
                 <h2>Edit Company</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{route('companies.index')}}" title="Go back"> <em
+                <a class="btn btn-primary" href="{{route('Companies.index')}}" title="Go back"> <em
                         class="fas fa-backward "></em> </a>
             </div>
         </div>
@@ -24,7 +24,7 @@
         </div>
     @endif
 
-    <form action="{{route('companies.update', $company->id)}}" method="POST">
+    <form action="{{route('Companies.update', $company->id)}}" method="POST">
         @csrf
         @method('PUT')
 

@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 
 class CityController extends Controller
 {
-    const CITIES_INDEX = "cities.index";
+    const CITIES_INDEX = "Cities.index";
     /**
      * Display a listing of the resource.
      *
@@ -31,7 +31,7 @@ class CityController extends Controller
      */
     public function create()
     {
-        return view('cities.create');
+        return view('Cities.create');
     }
 
     /**
@@ -60,7 +60,7 @@ class CityController extends Controller
      */
     public function show(City $city)
     {
-        return view('cities.show', compact('city'));
+        return view('Cities.show', compact('city'));
     }
 
     /**
@@ -71,7 +71,7 @@ class CityController extends Controller
      */
     public function edit(City $city)
     {
-        return view('cities.edit', compact('city'));
+        return view('Cities.edit', compact('city'));
     }
     /**
      * Update the specified resource in storage.

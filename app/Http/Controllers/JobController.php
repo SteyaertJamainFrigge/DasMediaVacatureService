@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 
 class JobController extends Controller
 {
-    private const JOBS_INDEX = 'jobs.index';
+    private const JOBS_INDEX = 'Jobs.index';
 
     /**
      * Display a listing of the resource.
@@ -21,7 +21,6 @@ class JobController extends Controller
     public function index()
     {
         $jobs = Job::latest()->paginate(5);
-        var_dump($jobs);
         return view(self::JOBS_INDEX, compact('jobs'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
@@ -34,7 +33,7 @@ class JobController extends Controller
     public function create()
     {
         $companies = Company::all();
-        return view('jobs.create', compact('companies'));
+        return view('Jobs.create', compact('companies'));
     }
 
     /**
@@ -66,7 +65,7 @@ class JobController extends Controller
      */
     public function show(Job $job)
     {
-        return view('jobs.show', compact('job'));
+        return view('Jobs.show', compact('job'));
     }
 
     /**
@@ -78,7 +77,7 @@ class JobController extends Controller
     public function edit(Job $job)
     {
         $companies = Company::all();
-        return view('jobs.edit', compact('job', 'companies'));
+        return view('Jobs.edit', compact('job', 'companies'));
     }
 
     /**

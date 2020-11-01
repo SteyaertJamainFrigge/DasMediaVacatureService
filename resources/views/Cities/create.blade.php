@@ -7,7 +7,7 @@
                 <h2>Add New City</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{route('cities.index')}}" title="Go back"> <em class="fas fa-backward "></em> </a>
+                <a class="btn btn-primary" href="{{route('Cities.index')}}" title="Go back"> <em class="fas fa-backward "></em> </a>
             </div>
         </div>
     </div>
@@ -22,7 +22,7 @@
             </ul>
         </div>
     @endif
-    <form action="{{route('cities.store')}}" method="POST">
+    <form action="{{route('Cities.store')}}" method="POST">
         @csrf
 
         <div class="row">
