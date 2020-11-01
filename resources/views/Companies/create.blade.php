@@ -7,7 +7,7 @@
                 <h2>Add New Company</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{route('Companies.index')}}" title="Go back"> <em
+                <a class="btn btn-primary" href="{{route('companies.index')}}" title="Go back"> <em
                         class="fas fa-backward "></em> </a>
             </div>
         </div>
@@ -23,7 +23,7 @@
             </ul>
         </div>
     @endif
-    <form action="{{route('Companies.store')}}" method="POST">
+    <form action="{{route('companies.store')}}" method="POST">
         @csrf
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12">

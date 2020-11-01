@@ -7,7 +7,7 @@
                 <h2>All Companies</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{route('Companies.create')}}" title="Create a Company"> <em class="fas fa-plus-circle"></em>
+                <a class="btn btn-success" href="{{route('companies.create')}}" title="Create a Company"> <em class="fas fa-plus-circle"></em>
                 </a>
             </div>
         </div>
@@ -37,17 +37,17 @@
                 <td>{{$company->updated_at}}</td>
                 <td>
                     @guest
-                        <a href="{{route('Companies.show', $company)}}" title="show">
+                        <a href="{{route('companies.show', $company)}}" title="show">
                             <em class="fas fa-eye text-success  fa-lg"></em>
                         </a>
                     @else
-                        <form action="{{route('Companies.destroy', $company)}}" method="POST">
+                        <form action="{{route('companies.destroy', $company)}}" method="POST">
 
-                            <a href="{{route('Companies.show', $company)}}" title="show">
+                            <a href="{{route('companies.show', $company)}}" title="show">
                                 <em class="fas fa-eye text-success  fa-lg"></em>
                             </a>
 
-                            <a href="{{route('Companies.edit', $company)}}">
+                            <a href="{{route('companies.edit', $company)}}">
                                 <em class="fas fa-edit  fa-lg"></em>
                             </a>
                             @csrf

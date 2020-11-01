@@ -44,7 +44,7 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('Jobs.index')}}">Jobs</a>
+                                <a class="nav-link" href="{{route('jobs.index')}}">Jobs</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -56,13 +56,13 @@
                             @endif
                         @else
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('Jobs.index')}}">Jobs</a>
+                                <a class="nav-link" href="{{route('jobs.index')}}">Jobs</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('Companies.index')}}">Companies</a>
+                                <a class="nav-link" href="{{route('companies.index')}}">Companies</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('Cities.index')}}">Cities</a>
+                                <a class="nav-link" href="{{route('cities.index')}}">Cities</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>

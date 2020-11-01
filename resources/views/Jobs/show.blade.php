@@ -8,7 +8,7 @@
                 <h2>{{$job->title}}</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{route('Jobs.index')}}" title="Go back"> <i class="fas fa-backward "></i> </a>
+                <a class="btn btn-primary" href="{{route('jobs.index')}}" title="Go back"> <i class="fas fa-backward "></i> </a>
             </div>
         </div>
     </div>
