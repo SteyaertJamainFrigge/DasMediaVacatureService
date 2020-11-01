@@ -6,11 +6,13 @@
             <div class="pull-left">
                 <h2>All Jobs</h2>
             </div>
-            <div class="pull-right">
-                <a class="btn btn-success" href="{{route('jobs.create')}}" title="Create a product"> <em
-                        class="fas fa-plus-circle"></em>
-                </a>
-            </div>
+            @auth
+                <div class="pull-right">
+                    <a class="btn btn-success" href="{{route('jobs.create')}}" title="Create a product"> <em
+                            class="fas fa-plus-circle"></em>
+                    </a>
+                </div>
+            @endauth
         </div>
     </div>
 
