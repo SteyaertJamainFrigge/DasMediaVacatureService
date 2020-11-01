@@ -21,6 +21,7 @@ class JobController extends Controller
     public function index()
     {
         $jobs = Job::latest()->paginate(5);
+        var_dump($jobs);
         return view(self::JOBS_INDEX, compact('jobs'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
